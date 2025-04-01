@@ -1,4 +1,4 @@
-package com.exo.userservice.web.rest.controller;
+package com.exo.service_user.web.rest.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
