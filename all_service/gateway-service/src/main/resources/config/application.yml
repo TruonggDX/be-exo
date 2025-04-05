@@ -1,0 +1,24 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: service_user
+          uri: http://localhost:8081
+          predicates:
+            - Path=/api/users/**
+        - id: service_exo
+          uri: http://localhost:8082
+          predicates:
+            - Path=/api/exo/**
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
